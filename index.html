@@ -8,7 +8,7 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="style.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -17,6 +17,29 @@
 
 <body>
     <h1>Late Night Brunch</h1>
-  <script src="main.js"></script>
+    <div id="map"></div>
+    <form>
+        <label for="healthSearch">Health Category:</label>
+        <input type="text" id="healthSearch">
+        <label for="priceRange">Price Range</label>
+        <select name="priceRange" id="priceRange">
+            <option value="5-10">$5-$10</option>
+            <option value="10-15">$10-$15</option>
+            <option value="15-20">$15-$20</option>
+            <option value="20+">$20+</option>
+        </select>
+        <label for="closingTime">Closing time</label>
+        <input type="text" id="closingTime">
+        <label for="restaurantLocation">Restaurant Location</label>
+        <input type="text" id="restaurantLocation">
+        <input type="submit" value="search">
+    </form>
+    <script src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAuEH5odTn_sLi80l8MQ_rQ33xWCf0uSY&callback=initMap"
+    async defer>
+    </script>
 </body>
 </html>
+
+
+<!-- AIzaSyAAuEH5odTn_sLi80l8MQ_rQ33xWCf0uSY -->
