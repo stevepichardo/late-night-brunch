@@ -1,0 +1,59 @@
+doctype html    
+
+html    
+    head
+        meta(charset='UTF-8')
+        title= title 
+        link(rel="stylesheet" type="text/css" href="/static/libs/css/normalize.css")
+        link(rel='stylesheet', href='/static/stylesheets/style.css')
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        script(src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAuEH5odTn_sLi80l8MQ_rQ33xWCf0uSY&callback=initMap"
+    async defer)
+        script(src='/static/js/main.js')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css')
+
+
+
+    
+    body
+        // header 
+        header(class='w3-container w3-margin-bottom')
+            div#headerRow(class="w3-row-padding")
+                h1(class='w3-xxxlarge') Late Night Brunch
+
+
+        div(class="w3-row-padding ")
+            div(class="w3-half left")
+                // google map
+                div#map
+
+            div#frontDisplay(class="w3-half right form-group")
+                // register form
+                form#searchForm(method='GET' action='/search' name="searchForm")
+                    label(for='healthSearch') Health Category:
+                    input#healthSearch(type='text', placeHolder='Ex. Gluten Free' name='healthSearch' class="form-group")
+                    label(for='priceRange') Price Range
+                    select#priceRange(name='priceRange')
+                        option(value='1') $5-$10
+                        option(value='2') $10-$15
+                        option(value='3') $15-$20
+                        option(value='4') $20+ 
+                    label(for="restaurantLocation") Restaurant Location
+                    input#restaurantLocation(required type="text" placeHolder='Ex. Miami, fl' name='restaurantLocation')
+                    button(type="submit" class="w3-button w3-black") Search
+            div#backDisplay(class="w3-half right form-group")
+                div#resultDisplayContainer
+                    ul(class='w3-ul')#resultDisplay
+
+                button#newSearch(class="w3-button w3-red w3-display-bottommiddle") New Search
+            
+        //footer
+        div(class='w3-container w3-light-grey w3-margin-top')
+            footer#appFooter(class="container") 
+            p @Copyright Steven Pichardo 
+    
+        script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js')
+        

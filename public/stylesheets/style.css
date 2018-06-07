@@ -1,0 +1,150 @@
+/*******************************
+Google Map 
+********************************/
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 500px;
+    width: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+    
+/*************************
+Headings
+**************************/
+    
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 7px;
+    word-spacing: 15px;
+    font-size: 300px
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&dl=rachel-park-366508-unsplash.jpg&s=a4741c7a583c29bbd655163b3d454544, );
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 45vh;
+}
+
+#headerRow {
+    padding-top: 7em;
+}
+
+/*************************
+Columns
+**************************/
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 100%;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  /* padding: 20px; */
+  margin-top: 10px;
+  padding-bottom: 13em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*************************
+input elements
+**************************/
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/*************************
+Back Display && Container && Front Display
+**************************/
+#backDisplay {
+    display: none;
+    margin: 0 0;
+
+}
+
+.resultBox {
+    margin-bottom: px;
+    transition: 0.3s;
+    width: fit-content;
+    padding: 15px;
+}
+
+#resultDisplay {
+    list-style-type: none;
+}
+
+div#resultDisplayContainer {
+    height: 500px;
+    overflow-y: auto;
+}
+
+button#newSearch {
+    left: 40%;
+    position: relative;
+}
+
+#frontDisplay {
+    margin-top: 0;
+}
+
+/*************************
+Form Labels
+**************************/
+
+/*************************
+Form Labels
+**************************/
+
+img {
+    height: 75px;
+
+    vertical-align: middle;
+}
